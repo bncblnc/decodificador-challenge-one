@@ -18,18 +18,23 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.grid {
+.grid-layout {
   margin: 4rem auto;
   max-width: 120rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 17fr 2fr;
-  grid-gap: 3rem 4rem;
-  max-height: 85vh;
+  grid-column-gap: 4rem;
 }
 
 .header-logo {
   height: 4.8rem;
+}
+
+.first-column {
+  max-height: 85vh;
+  display: grid;
+  grid-row-gap: 3rem;
+  grid-template-rows: 1fr 17fr 2fr;
 }
 
 .entry {
@@ -37,16 +42,19 @@ body {
   margin: 0 0 0 auto;
 }
 
-.entry-input {
-  font-size: 3rem;
+.input {
   font-weight: 400;
   color: #072b61;
-  width: 100%;
-  height: 97%;
   border: none;
   background-color: transparent;
   padding: 1rem;
   resize: none;
+}
+
+.entry-input {
+  font-size: 3rem;
+  width: 100%;
+  height: 97%;
 }
 
 .entry-input::placeholder {
@@ -67,38 +75,7 @@ body {
   margin-right: 0.5em;
 }
 
-.result {
-  border-radius: 3.2rem;
-  background-color: #fff;
-  grid-column: 2;
-  grid-row: 1 / 4;
-  padding: 3rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.result-img {
-  width: 30rem;
-  margin-bottom: 2rem;
-}
-
-.result-title {
-  font-weight: 700;
-  font-size: 2.4rem;
-  color: #343a40;
-  margin-bottom: 2rem;
-}
-
-.result-text {
-  font-size: 1.6rem;
-  font-weight: 400;
-  color: #495057;
-  line-height: 2.4rem;
-}
-
-.btn-section {
+.btn-area {
   margin: 0 0 0 auto;
   width: 60rem;
   display: flex;
@@ -128,10 +105,63 @@ body {
 
 .btn-secondary {
   color: #0a3871;
-  background-color: #eff1fa;
+  background-color: transparent;
   border: 2px solid #0a3871;
 }
 
 .btn-secondary:hover {
-  background-color: #d8dfe8;
+  background-color: rgba(93, 92, 92, 0.084);
+}
+
+.result {
+  border-radius: 3.2rem;
+  background-color: #fff;
+  height: 100%;
+  text-align: center;
+}
+
+.result-off {
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-img {
+  width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.result-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #343a40;
+  margin-bottom: 2rem;
+}
+
+.result-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #495057;
+  line-height: 2.4rem;
+}
+
+.result-on {
+  height: 100%;
+  padding: 2rem;
+
+  display: none;
+}
+
+.result-input {
+  font-size: 2rem;
+  width: 100%;
+  height: 85%;
+  margin-bottom: 2rem;
+  border-radius: 2rem;
+}
+
+.result-input:focus {
+  box-shadow: 0 0 0.8rem 0.5rem rgba(214, 214, 214, 0.5);
 }

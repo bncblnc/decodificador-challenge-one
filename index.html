@@ -13,46 +13,62 @@
     <link rel="stylesheet" href="style.css" />
     <title>Decodificador</title>
   </head>
+
   <body>
-    <div class="grid">
-      <header class="header">
-        <h1>
-          <img class="header-logo" src="img/logo-alura.svg" alt="Logo Alura" />
-        </h1>
-      </header>
+    <div class="grid-layout">
+      <div class="first-column">
+        <header class="header">
+          <h1>
+            <img
+              class="header-logo"
+              src="img/logo-alura.svg"
+              alt="Logo Alura"
+            />
+          </h1>
+        </header>
 
-      <section class="entry">
-        <textarea
-          class="entry-input"
-          type="text"
-          placeholder="Digite seu texto"
-        ></textarea>
-        <div class="entry-info">
-          <img
-            class="info-icon"
-            src="img/icon-info.svg"
-            alt="Ícone indicando informação"
-          />
-          <p>Apenas letras minúsculas e sem acento.</p>
+        <section class="entry">
+          <textarea
+            class="entry-input input"
+            type="text"
+            placeholder="Digite seu texto"
+          ></textarea>
+          <div class="entry-info">
+            <img
+              class="info-icon"
+              src="img/icon-info.svg"
+              alt="Ícone indicando informação"
+            />
+            <p>Apenas letras minúsculas e sem acento.</p>
+          </div>
+        </section>
+
+        <div class="btn-area">
+          <button class="btn btn-primary">Criptografar</button>
+          <button class="btn btn-secondary">Decriptografar</button>
         </div>
-      </section>
+      </div>
 
-      <section class="result">
-        <img
-          class="result-img"
-          src="img/results-art.svg"
-          alt="Ilustração de um menino com uma lupa observando um diamante"
-        />
-        <h2 class="result-title">Nenhuma mensagem encontrada</h2>
-        <p class="result-text">
-          Digite um texto que você deseja criptografar ou descriptografar.
-        </p>
-      </section>
+      <div class="result">
+        <div class="result-off">
+          <img
+            class="result-img"
+            src="img/results-art.svg"
+            alt="Ilustração de um menino com uma lupa observando um diamante"
+          />
+          <h2 class="result-title">Nenhuma mensagem encontrada</h2>
+          <p class="result-text">
+            Digite um texto que você deseja criptografar ou descriptografar.
+          </p>
+        </div>
 
-      <section class="btn-section">
-        <button class="btn btn-primary">Criptografar</button>
-        <button class="btn btn-secondary">Decriptografar</button>
-      </section>
+        <div class="result-on">
+          <textarea class="result-input input">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sapiente exercitationem? Mollitia delectus ut, at aliquid blanditiis, molestias placeat aperiam consequatur rem consectetur itaque nostrum. Corrupti voluptate facere 
+          </textarea>
+          <button class="btn btn-secondary">Copiar</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
