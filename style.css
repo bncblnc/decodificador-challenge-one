@@ -1,3 +1,17 @@
+/* COLORS */
+
+:root {
+  --primary-color: #0a3871;
+  --primary-color-dark: #072b61;
+  --primary-color-light: #f3f5fc;
+
+  --color-white: #fff;
+  --grey-dark: #343a40;
+  --grey-light: #495057;
+}
+
+/* GENERAL STYLES */
+
 * {
   padding: 0;
   margin: 0;
@@ -14,9 +28,11 @@ html {
 }
 
 body {
-  background-color: #f3f5fc;
+  background-color: var(--primary-color-light);
   font-family: "Inter", sans-serif;
 }
+
+/* GRID */
 
 .grid-layout {
   margin: 4rem auto;
@@ -26,10 +42,6 @@ body {
   grid-column-gap: 4rem;
 }
 
-.header-logo {
-  height: 4.8rem;
-}
-
 .first-column {
   max-height: 85vh;
   display: grid;
@@ -37,32 +49,39 @@ body {
   grid-template-rows: 1fr 17fr 2fr;
 }
 
-.entry {
+/* HEADER */
+.header-logo {
+  height: 4.8rem;
+}
+
+/* INPUT */
+.input {
   width: 60rem;
   margin: 0 0 0 auto;
 }
 
-.input {
+.input-textarea,
+.result-textarea {
   font-weight: 400;
-  color: #072b61;
+  color: var(--primary-color);
   border: none;
   background-color: transparent;
   padding: 1rem;
   resize: none;
 }
 
-.entry-input {
+.input-textarea {
   font-size: 3rem;
   width: 100%;
   height: 97%;
 }
 
-.entry-input::placeholder {
+.input-textarea::placeholder {
   font-size: 3.2rem;
-  color: #0a3871;
+  color: var(--primary-color);
 }
 
-.entry-info {
+.input-info {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
@@ -75,6 +94,7 @@ body {
   margin-right: 0.5em;
 }
 
+/* BUTTONS */
 .btn-area {
   margin: 0 0 0 auto;
   width: 60rem;
@@ -95,27 +115,29 @@ body {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #0a3871;
+  color: var(--color-white);
+  background-color: var(--primary-color);
 }
 
 .btn-primary:hover {
-  background-color: #072b61;
+  background-color: var(--primary-color-dark);
 }
 
 .btn-secondary {
-  color: #0a3871;
+  color: var(--primary-color);
   background-color: transparent;
-  border: 2px solid #0a3871;
+  border: 2px solid var(--primary-color);
 }
 
 .btn-secondary:hover {
   background-color: rgba(93, 92, 92, 0.084);
 }
 
+/* RESULTS */
+
 .result {
   border-radius: 3.2rem;
-  background-color: #fff;
+  background-color: var(--color-white);
   height: 100%;
   text-align: center;
 }
@@ -136,14 +158,14 @@ body {
 .result-title {
   font-weight: 700;
   font-size: 2.4rem;
-  color: #343a40;
+  color: var(--grey-dark);
   margin-bottom: 2rem;
 }
 
 .result-text {
   font-size: 1.6rem;
   font-weight: 400;
-  color: #495057;
+  color: var(--grey-light);
   line-height: 2.4rem;
 }
 
@@ -154,7 +176,7 @@ body {
   display: none;
 }
 
-.result-input {
+.result-textarea {
   font-size: 2rem;
   width: 100%;
   height: 85%;
@@ -162,6 +184,6 @@ body {
   border-radius: 2rem;
 }
 
-.result-input:focus {
+.result-textarea:focus {
   box-shadow: 0 0 0.8rem 0.5rem rgba(214, 214, 214, 0.5);
 }

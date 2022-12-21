@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,6 +12,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+
+    <script defer src="script.js"></script>
+
     <title>Decodificador</title>
   </head>
 
@@ -27,13 +31,13 @@
           </h1>
         </header>
 
-        <section class="entry">
+        <section class="input">
           <textarea
-            class="entry-input input"
+            class="input-textarea"
             type="text"
             placeholder="Digite seu texto"
           ></textarea>
-          <div class="entry-info">
+          <div class="input-info">
             <img
               class="info-icon"
               src="img/icon-info.svg"
@@ -44,8 +48,8 @@
         </section>
 
         <div class="btn-area">
-          <button class="btn btn-primary">Criptografar</button>
-          <button class="btn btn-secondary">Decriptografar</button>
+          <button class="btn btn-primary" id="encrypt">Criptografar</button>
+          <button class="btn btn-secondary" id="decrypt">Decriptografar</button>
         </div>
       </div>
 
@@ -63,10 +67,10 @@
         </div>
 
         <div class="result-on">
-          <textarea class="result-input input">
+          <textarea class="result-textarea">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sapiente exercitationem? Mollitia delectus ut, at aliquid blanditiis, molestias placeat aperiam consequatur rem consectetur itaque nostrum. Corrupti voluptate facere 
           </textarea>
-          <button class="btn btn-secondary">Copiar</button>
+          <button class="btn btn-secondary" id="copy">Copiar</button>
         </div>
       </div>
     </div>
