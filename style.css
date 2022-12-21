@@ -1,0 +1,136 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0.8rem 0.5rem rgba(10, 56, 113, 0.5);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f3f5fc;
+  font-family: "Inter", sans-serif;
+}
+
+.grid {
+  margin: 4rem auto;
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 4.8rem 40rem 7rem;
+  grid-gap: 4rem 4rem;
+  max-height: 85vh;
+}
+
+.header-logo {
+  height: 100%;
+}
+
+.entry {
+  width: 60rem;
+  margin: 0 0 0 auto;
+}
+
+.entry-input {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #072b61;
+  width: 100%;
+  height: 97%;
+  border: none;
+  background-color: transparent;
+  padding: 2rem;
+  resize: none;
+}
+
+.entry-input::placeholder {
+  font-size: 3.2rem;
+  color: #0a3871;
+}
+
+.entry-info {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 1rem 0 0 2rem;
+}
+
+.info-icon {
+  width: 1.6rem;
+  margin-right: 0.5em;
+}
+
+.result {
+  border-radius: 3.2rem;
+  background-color: #fff;
+  grid-column: 2;
+  grid-row: 1 / 4;
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-img {
+  width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.result-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #343a40;
+  margin-bottom: 2rem;
+}
+
+.result-text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #495057;
+  line-height: 2.4rem;
+}
+
+.btn-section {
+  margin: 0 0 0 auto;
+  width: 60rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 9rem;
+  border-radius: 2.4rem;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0a3871;
+}
+
+.btn-primary:hover {
+  background-color: #072b61;
+}
+
+.btn-secondary {
+  color: #0a3871;
+  background-color: #eff1fa;
+  border: 2px solid #0a3871;
+}
+
+.btn-secondary:hover {
+  background-color: #d8dfe8;
+}

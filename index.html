@@ -4,35 +4,55 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Decodificador</title>
   </head>
   <body>
-    <header class="header">
-      <h1>
-        <img class="header-logo" src="img/logo-alura.svg" alt="Logo Alura"/>
-      </h1>
-    </header>
+    <div class="grid">
+      <header class="header">
+        <h1>
+          <img class="header-logo" src="img/logo-alura.svg" alt="Logo Alura" />
+        </h1>
+      </header>
 
-    <main>
       <section class="entry">
-        <input class="entry-input" type="text" placeholder="Digite seu texto"></input>
+        <textarea
+          class="entry-input"
+          type="text"
+          placeholder="Digite seu texto"
+        ></textarea>
         <div class="entry-info">
-          <img class="info-icon" src="img/icon-info.svg" alt="Ícone indicando informação">
-          <p class="info-text">Apenas letras minúsculas e sem acento.</p>
+          <img
+            class="info-icon"
+            src="img/icon-info.svg"
+            alt="Ícone indicando informação"
+          />
+          <p>Apenas letras minúsculas e sem acento.</p>
         </div>
       </section>
 
       <section class="result">
-        <img class="result-img" src="img/results-art.svg" alt="Ilustração de um menino com uma lupa observando um diamante"/>
+        <img
+          class="result-img"
+          src="img/results-art.svg"
+          alt="Ilustração de um menino com uma lupa observando um diamante"
+        />
         <h2 class="result-title">Nenhuma mensagem encontrada</h2>
-        <p class="result-text" >Digite um texto que você deseja criptografar ou descriptografar.</p>
+        <p class="result-text">
+          Digite um texto que você deseja criptografar ou descriptografar.
+        </p>
       </section>
 
-      <section class="btn">
-        <button class="btn-primary">Criptografar</button>
-        <button class="btn-secondary">Decriptografar</button>
+      <section class="btn-section">
+        <button class="btn btn-primary">Criptografar</button>
+        <button class="btn btn-secondary">Decriptografar</button>
       </section>
-    </main>
-
+    </div>
   </body>
 </html>
