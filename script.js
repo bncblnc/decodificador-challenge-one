@@ -54,7 +54,6 @@ function decrypt() {
 function copy() {
   const text = output;
 
-  console.log(text);
   text.select();
   text.setSelectionRange(0, 99999);
   document.execCommand("copy");
