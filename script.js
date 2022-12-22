@@ -13,16 +13,42 @@ btnCopy.addEventListener("click", copy);
 function encrypt() {
   const text = input.value;
 
-  displayResult();
-  //e = enter / i = imes / a = ai / o = ober / u = ufat
+  let result = text.replace(/(a)|(e)|(i)|(o)|(u)/g, (char) => {
+    switch (char) {
+      case "a":
+        return "ai";
+      case "e":
+        return "enter";
+      case "i":
+        return "imes";
+      case "o":
+        return "ober";
+      case "u":
+        return "ufat";
+    }
+  });
+
+  displayResult(result);
 }
 
 function decrypt() {
-  const result = input.value;
+  const text = input.value;
 
-  displayResult();
-
-  //e = enter / i = imes / a = ai / o = ober / u = ufat
+  let result = text.replace(/(ai)|(enter)|(imes)|(ober)|(ufat)/g, (char) => {
+    switch (char) {
+      case "ai":
+        return "a";
+      case "enter":
+        return "e";
+      case "imes":
+        return "i";
+      case "ober":
+        return "o";
+      case "ufat":
+        return "u";
+    }
+  });
+  displayResult(result);
 }
 
 function copy() {
@@ -34,7 +60,8 @@ function copy() {
   document.execCommand("copy");
 }
 
-function displayResult() {
+function displayResult(result) {
   resultOff.style.display = "none";
+  output.textContent = result;
   resultOn.style.display = "inherit";
 }
