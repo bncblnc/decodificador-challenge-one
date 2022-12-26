@@ -37,6 +37,8 @@ body {
 .grid-layout {
   margin: 4rem auto;
   max-width: 120rem;
+  /* display: flex; */
+
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-column-gap: 4rem;
@@ -69,10 +71,10 @@ body {
   padding: 1rem;
   resize: none;
   font-size: 3rem;
+  width: 100%;
 }
 
 .input-textarea {
-  width: 100%;
   height: 97%;
 }
 
@@ -112,6 +114,7 @@ body {
   border: none;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: all 0.5s;
 }
 
 .btn-primary {
@@ -174,17 +177,27 @@ body {
 .result-on {
   height: 100%;
   padding: 2rem;
-
-  display: none;
 }
 
 .result-textarea {
-  width: 100%;
   height: 85%;
   margin-bottom: 2rem;
   border-radius: 2rem;
 }
 
-.result-textarea:focus {
+.result-textarea:focus,
+.copy:focus {
   box-shadow: 0 0 0.8rem 0.5rem rgba(214, 214, 214, 0.5);
+}
+
+.result-control {
+  display: none;
+}
+
+.copy {
+  background-color: #04cc15;
+  border: none;
+  font-weight: 700;
+  color: var(--color-white);
+  cursor: inherit;
 }

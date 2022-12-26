@@ -52,15 +52,29 @@ function decrypt() {
 }
 
 function copy() {
-  const text = output;
+  if (btnCopy.classList.contains("copy")) return;
 
+  const text = output;
   text.select();
   text.setSelectionRange(0, 99999);
   document.execCommand("copy");
+
+  btnCopy.classList.remove("btn-secondary");
+  btnCopy.classList.add("copy");
+  btnCopy.textContent = "✔ Copiado";
 }
 
 function displayResult(result) {
-  resultOff.style.display = "none";
   output.textContent = result;
-  resultOn.style.display = "inherit";
+
+  if (btnCopy.classList.contains("copy")) {
+    btnCopy.classList.remove("copy");
+    btnCopy.classList.add("btn-secondary");
+    btnCopy.textContent = "Copiar";
+  }
+
+  if (!resultOff.classList.contains("result-control")) {
+    resultOff.classList.toggle("result-control");
+    resultOn.classList.toggle("result-control");
+  }
 }
