@@ -12,6 +12,10 @@
   .first-column {
     grid-row-gap: 2rem;
   }
+
+  .input {
+    margin-bottom: 1rem;
+  }
 }
 
 /*******************************/
@@ -32,11 +36,11 @@
 
   .input {
     width: 90%;
-    margin: 0;
+    margin: 0 0 2rem 2rem;
   }
 
   .btn-area {
-    margin: 0 0 3rem 0;
+    margin: 0 0 3rem 2rem;
     width: 60rem;
   }
 
@@ -73,13 +77,15 @@
 
 @media (max-width: 34em) {
   .input {
-    margin-bottom: 2rem;
+    margin: 0 0 2rem 0;
+    width: 100%;
   }
 
   .btn-area {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-left: 0rem;
   }
 
   .btn {
@@ -97,5 +103,9 @@
 
   .result {
     margin: 1rem;
+  }
+
+  .result-on {
+    height: 40rem;
   }
 }

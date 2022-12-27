@@ -8,6 +8,8 @@
   --color-white: #fff;
   --grey-dark: #343a40;
   --grey-light: #495057;
+  --color-green: #40c057;
+  --color-red: #f00;
 }
 
 /* GENERAL STYLES */
@@ -100,7 +102,7 @@ body {
 }
 
 .invalid {
-  color: red;
+  color: var(--color-red);
 }
 
 .invalid textarea:focus {
@@ -108,7 +110,7 @@ body {
 }
 
 .invalid textarea::placeholder {
-  color: red;
+  color: var(--color-red);
 }
 
 /* BUTTONS */
@@ -216,14 +218,14 @@ body {
   box-shadow: 0 0 0.8rem 0.5rem rgba(214, 214, 214, 0.5);
 }
 
-.hidden {
-  display: none;
-}
-
 .copy {
-  background-color: #04cc15;
+  background-color: var(--color-green);
   border: none;
   font-weight: 700;
   color: var(--color-white);
   cursor: inherit;
+}
+
+.hidden {
+  display: none;
 }

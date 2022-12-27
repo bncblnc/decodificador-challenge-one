@@ -2,6 +2,7 @@ const input = document.querySelector(".input-textarea");
 const output = document.querySelector(".result-textarea");
 const resultOn = document.querySelector(".result-on");
 const resultOff = document.querySelector(".result-off");
+const inputArea = document.querySelector(".input");
 const btnEncrypt = document.getElementById("encrypt");
 const btnDecrypt = document.getElementById("decrypt");
 const btnCopy = document.getElementById("copy");
@@ -14,7 +15,11 @@ btnPaste.addEventListener("click", paste);
 input.addEventListener("keypress", clearPaste);
 
 function encrypt() {
-  const text = input.value;
+  if (!checkInvalid()) return;
+  const text = input.value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 
   let result = text.replace(/(a)|(e)|(i)|(o)|(u)/g, (char) => {
     switch (char) {
@@ -35,7 +40,11 @@ function encrypt() {
 }
 
 function decrypt() {
-  const text = input.value;
+  if (!checkInvalid()) return;
+  const text = input.value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
 
   let result = text.replace(/(ai)|(enter)|(imes)|(ober)|(ufat)/g, (char) => {
     switch (char) {
@@ -56,7 +65,6 @@ function decrypt() {
 
 function copy() {
   if (btnCopy.classList.contains("copy")) return;
-  // input.value = "";
 
   const text = output;
   text.select();
@@ -95,4 +103,15 @@ function paste() {
   resultOff.classList.toggle("hidden");
   resultOn.classList.toggle("hidden");
   btnPaste.classList.add("hidden");
+}
+
+function checkInvalid() {
+  if (input.value == "") {
+    inputArea.classList.add("invalid");
+    input.focus();
+    return false;
+  } else {
+    inputArea.classList.remove("invalid");
+    return true;
+  }
 }
