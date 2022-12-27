@@ -14,6 +14,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/queries.css" />
 
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script defer src="script.js"></script>
 
     <title>Decodificador</title>
@@ -39,13 +47,12 @@
             placeholder="Digite seu texto"
           ></textarea>
           <div class="input-info">
-            <img
-              class="info-icon"
-              src="img/icon-info.svg"
-              alt="Ícone indicando informação"
-            />
+            <ion-icon name="information-circle" class="info-icon"></ion-icon>
             <p>Apenas letras minúsculas e sem acento.</p>
           </div>
+          <button class="btn btn-secondary btn-paste hidden" id="paste">
+            Colar
+          </button>
         </section>
 
         <div class="btn-area">
@@ -67,7 +74,7 @@
           </p>
         </div>
 
-        <div class="result-on result-control">
+        <div class="result-on hidden">
           <textarea class="result-textarea">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, sapiente exercitationem? Mollitia delectus ut, at aliquid blanditiis, molestias placeat aperiam consequatur rem consectetur itaque nostrum. Corrupti voluptate facere 
           </textarea>

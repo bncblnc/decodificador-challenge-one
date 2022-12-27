@@ -5,10 +5,13 @@ const resultOff = document.querySelector(".result-off");
 const btnEncrypt = document.getElementById("encrypt");
 const btnDecrypt = document.getElementById("decrypt");
 const btnCopy = document.getElementById("copy");
+const btnPaste = document.getElementById("paste");
 
 btnEncrypt.addEventListener("click", encrypt);
 btnDecrypt.addEventListener("click", decrypt);
 btnCopy.addEventListener("click", copy);
+btnPaste.addEventListener("click", paste);
+input.addEventListener("keypress", clearPaste);
 
 function encrypt() {
   const text = input.value;
@@ -53,6 +56,7 @@ function decrypt() {
 
 function copy() {
   if (btnCopy.classList.contains("copy")) return;
+  // input.value = "";
 
   const text = output;
   text.select();
@@ -62,6 +66,8 @@ function copy() {
   btnCopy.classList.remove("btn-secondary");
   btnCopy.classList.add("copy");
   btnCopy.textContent = "✔ Copiado";
+
+  btnPaste.classList.remove("hidden");
 }
 
 function displayResult(result) {
@@ -73,8 +79,20 @@ function displayResult(result) {
     btnCopy.textContent = "Copiar";
   }
 
-  if (!resultOff.classList.contains("result-control")) {
-    resultOff.classList.toggle("result-control");
-    resultOn.classList.toggle("result-control");
+  if (!resultOff.classList.contains("hidden")) {
+    resultOff.classList.toggle("hidden");
+    resultOn.classList.toggle("hidden");
   }
+}
+
+function clearPaste() {
+  if (!btnPaste.classList.contains("hidden")) btnPaste.classList.add("hidden");
+}
+
+function paste() {
+  input.value = output.value;
+
+  resultOff.classList.toggle("hidden");
+  resultOn.classList.toggle("hidden");
+  btnPaste.classList.add("hidden");
 }
