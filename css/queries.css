@@ -45,6 +45,11 @@
     border-radius: 1.6rem;
   }
 
+  .btn-paste {
+    padding: 0 2rem;
+    border-radius: 0.8rem;
+  }
+
   .result {
     border-radius: 2.4rem;
     min-height: 30rem;
@@ -80,6 +85,10 @@
   .btn {
     height: 6rem;
     padding: 2 8rem;
+  }
+
+  .btn-paste {
+    height: 3rem;
   }
 
   .grid-layout {
