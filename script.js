@@ -78,6 +78,29 @@ function copy() {
   btnPaste.classList.remove("hidden");
 }
 
+function paste() {
+  input.value = output.value;
+
+  resultOff.classList.toggle("hidden");
+  resultOn.classList.toggle("hidden");
+  btnPaste.classList.add("hidden");
+}
+
+function clearPaste() {
+  if (!btnPaste.classList.contains("hidden")) btnPaste.classList.add("hidden");
+}
+
+function checkInvalid() {
+  if (input.value == "") {
+    inputArea.classList.add("invalid");
+    input.focus();
+    return false;
+  } else {
+    inputArea.classList.remove("invalid");
+    return true;
+  }
+}
+
 function displayResult(result) {
   output.textContent = result;
 
@@ -90,28 +113,5 @@ function displayResult(result) {
   if (!resultOff.classList.contains("hidden")) {
     resultOff.classList.toggle("hidden");
     resultOn.classList.toggle("hidden");
-  }
-}
-
-function clearPaste() {
-  if (!btnPaste.classList.contains("hidden")) btnPaste.classList.add("hidden");
-}
-
-function paste() {
-  input.value = output.value;
-
-  resultOff.classList.toggle("hidden");
-  resultOn.classList.toggle("hidden");
-  btnPaste.classList.add("hidden");
-}
-
-function checkInvalid() {
-  if (input.value == "") {
-    inputArea.classList.add("invalid");
-    input.focus();
-    return false;
-  } else {
-    inputArea.classList.remove("invalid");
-    return true;
   }
 }
