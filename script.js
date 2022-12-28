@@ -16,6 +16,7 @@ input.addEventListener("keypress", clearPaste);
 
 function encrypt() {
   if (!checkInvalid()) return;
+  clearPaste();
   const text = input.value
     .toLowerCase()
     .normalize("NFD")
@@ -41,6 +42,7 @@ function encrypt() {
 
 function decrypt() {
   if (!checkInvalid()) return;
+  clearPaste();
   const text = input.value
     .toLowerCase()
     .normalize("NFD")
