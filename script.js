@@ -84,6 +84,8 @@ function paste() {
   resultOff.classList.toggle("hidden");
   resultOn.classList.toggle("hidden");
   btnPaste.classList.add("hidden");
+
+  resetCopy();
 }
 
 function clearPaste() {
@@ -104,14 +106,16 @@ function checkInvalid() {
 function displayResult(result) {
   output.textContent = result;
 
-  if (btnCopy.classList.contains("copy")) {
-    btnCopy.classList.remove("copy");
-    btnCopy.classList.add("btn-secondary");
-    btnCopy.textContent = "Copiar";
-  }
+  if (btnCopy.classList.contains("copy")) resetCopy();
 
   if (!resultOff.classList.contains("hidden")) {
     resultOff.classList.toggle("hidden");
     resultOn.classList.toggle("hidden");
   }
+}
+
+function resetCopy() {
+  btnCopy.classList.remove("copy");
+  btnCopy.classList.add("btn-secondary");
+  btnCopy.textContent = "Copiar";
 }

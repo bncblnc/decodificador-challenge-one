@@ -167,6 +167,8 @@ body {
 /* RESULTS */
 
 .result {
+  position: relative;
+
   width: 100%;
   border-radius: 3.2rem;
   background-color: var(--color-white);
@@ -176,11 +178,13 @@ body {
 }
 
 .result-off {
+  position: absolute;
   height: 100%;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: all 0.3s;
 }
 
 .result-img {
@@ -203,6 +207,7 @@ body {
 }
 
 .result-on {
+  position: absolute;
   height: 100%;
   padding: 2rem;
 }
@@ -227,5 +232,6 @@ body {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
 }
