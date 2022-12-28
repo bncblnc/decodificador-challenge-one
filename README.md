@@ -1,10 +1,9 @@
 <h2 align="center"> 🔒 Decodificador de texto</h2>
 <div>
-    <p>Desafio proposto pelo programa "ONE - Oracle Next Education", parceria da Oracle e Alura.</p>
-    <p>O objetivo do exercício é construir uma aplicação que criptografa e decriptografa textos.</p>
-    <p>O design do projeto foi feito a partir de um modelo figma disponibilizado pelo projeto.</p>
-  <br/><br/>
-    <h3>💻 TECNOLOGIAS:</h3>
+    <p>Desafio proposto pelo programa "ONE - Oracle Next Education", parceria da Oracle com a plataforma Alura.</p>
+    <p>O objetivo do exercício é construir uma aplicação que criptografa e descriptografa textos.</p>
+    <p>O design do projeto foi feito a partir de um modelo Figma disponibilizado pela Alura.</p>
+     <h3>💻 TECNOLOGIAS:</h3>
     <img  alt="Js" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
     <img  alt="HTML" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
     <img  alt="CSS" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
