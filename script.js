@@ -95,14 +95,21 @@ function clearPaste() {
 }
 
 function checkInvalid() {
-  if (input.value == "") {
+  const text = isEmpty(input.value);
+
+  if (text == "") {
     inputArea.classList.add("invalid");
+    input.value = "";
     input.focus();
     return false;
   } else {
     inputArea.classList.remove("invalid");
     return true;
   }
+}
+
+function isEmpty(text) {
+  return text.replace(/\s/g, "");
 }
 
 function displayResult(result) {
