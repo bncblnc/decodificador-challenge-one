@@ -78,8 +78,8 @@ function displayResult(result) {
 
 function changeCopy(condition) {
   if (condition == "copied")
-    copyBtnUpdate("btn-secondary", "copy", "✔ Copiado");
-  if (condition == "copy") copyBtnUpdate("copy", "btn-secondary", "Copiar");
+    copyBtnUpdate("btn-secondary", "copied", "✔ Copiado");
+  if (condition == "copy") copyBtnUpdate("copied", "btn-secondary", "Copiar");
 }
 
 function toggleResult() {
